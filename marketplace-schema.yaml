@@ -1,0 +1,25 @@
+title: Autonomous Dedicated one click deployment
+schemaVersion: 1.0.0
+version: "1.0"
+locale: "en"
+
+groupings:
+  - title: "Name for New Resources"
+    variables:
+    - ${compartment_id}
+    - ${vcn_dns_label}
+
+variables:
+  compartment_id:
+    title: Compartment
+    description: "Compartment to build ATP-D"
+    type: oci:identity:compartment:id
+
+  vcn_dns_label:
+    title: Host DNS Prefix
+    description: "DNS prefix for resources"
+    type: string
+    pattern: "^(|[a-z][a-z0-9-]{1,14})$"
+    minLength: 0
+    maxLength: 15
+    required: false
