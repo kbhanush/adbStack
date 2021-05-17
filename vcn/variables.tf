@@ -2,7 +2,7 @@ variable "compartment_ocid" {
 }
 
 variable "vcn_cidr" {
-  default     = "10.0.0.0/16"
+  default     = "11.0.0.0/16"
   description = "CIDR for Virtual Cloud Network (VCN)"
 }
 

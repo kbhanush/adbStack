@@ -20,7 +20,8 @@ data "oci_core_services" "svcgtw_services" {
 resource "oci_core_vcn" "vcn1" {
   cidr_block     = var.vcn_cidr
   compartment_id = var.compartment_ocid
-  display_name   = var.vcn_dns_label
+  #display_name   = var.vcn_dns_label
+  display_name   = "Kris-terraform-VCN-1"
   dns_label      = var.vcn_dns_label
 }
 
